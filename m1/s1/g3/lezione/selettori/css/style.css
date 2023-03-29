@@ -1,0 +1,33 @@
+a { 
+    color: black;
+}
+
+.colore-rosso{
+    color: red;
+
+}
+
+.colore-rosso sfondo-verde{
+    background-color: black;
+}
+
+#colore-blu{
+    background-color: purple;
+}
+
+/* selezione di figli */
+
+span b{
+    color: rebeccapurple;
+}
+
+ .paragrafo-speciale b{ /* peso 10+1 = 11 */
+    color: violet;
+}
+
+/* tag => peso 1
+class => peso 10
+id => peso 100
+inline style => peso 1000 */
+
+/* a parità di peso vince quello più in basso anche dentro lo stesso selettore */
