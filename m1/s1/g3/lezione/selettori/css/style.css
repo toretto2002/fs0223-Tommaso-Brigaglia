@@ -7,9 +7,6 @@ a {
 
 }
 
-.colore-rosso sfondo-verde{
-    background-color: black;
-}
 
 #colore-blu{
     background-color: purple;
@@ -21,8 +18,20 @@ span b{
     color: rebeccapurple;
 }
 
- .paragrafo-speciale b{ /* peso 10+1 = 11 */
+ .paragrafo-speciale b, .paragrafo-speciale em{ /* peso 10+1 = 11 */
     color: violet;
+}
+
+/* selezione solo dei figli di primo livello */
+
+.area-speciale > span {
+    color: blueviolet;
+}
+
+/* contrllo gli span dentro la lista e non quelli fuori  */
+
+.area-speciale ul li span {
+    font-style: italic;
 }
 
 /* tag => peso 1
