@@ -1,0 +1,84 @@
+
+:root{
+    font-size: 15px;
+}
+
+#logo{
+    width: 150px;
+    padding-left: 43%;
+    padding-bottom: 20px;
+}
+
+#under-logo{
+
+    border-top-width: 2px;
+    border-top-color: rgb(255, 191, 0);
+    background-color: rgb(255, 191, 0, 0.1);
+    padding-left: 39%;
+    margin: 0;
+    color: rgb(0, 125, 139);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+body{
+    margin: 0;
+}
+
+main{
+    padding-left: 28%;
+    width: 650px;
+}
+
+h1{
+    text-align: center;
+}
+
+#focaccia{
+    width: 650px;
+    border-radius: 2%;
+    /* box-shadow: 10px; */
+}
+
+#under-image{
+    padding-left: 41%;
+    color: rgb(0, 0, 0, 0.4);
+}
+
+#other-recipes{
+    color: rgb(188, 69, 0);
+    border-left: 1px;
+    border-color: orange;
+}
+
+a{
+    color: rgb(0, 146, 146);
+}
+
+h3{
+    border-bottom-width: 2px;
+    border-bottom-color:black;
+}
+
+#ingredients{
+    padding-top: 25px;
+}
+
+#instructions-start{
+    padding-left: 10px;
+}
+
+#instructions-start p{
+    padding-left: 3px;
+}
+
+#recipe{
+    margin: 0;
+    padding-left: 10px;
+}
+
+ h6{
+
+    font-size: 0.8rem;
+    margin: 10px;
+}
