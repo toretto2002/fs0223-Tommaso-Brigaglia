@@ -17,8 +17,8 @@
     padding-left: 39%;
     margin: 0;
     color: rgb(0, 125, 139);
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 body{
@@ -75,10 +75,11 @@ h3{
 #recipe{
     margin: 0;
     padding-left: 10px;
+    font-size: 0.9rem;
 }
 
  h6{
 
     font-size: 0.8rem;
-    margin: 10px;
+    margin: 0px;
 }
