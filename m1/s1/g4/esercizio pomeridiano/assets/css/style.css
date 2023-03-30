@@ -18,7 +18,11 @@ body{
 /* HEADER */
 
 #head{
-    background-color: rgb(13, 130, 150);
+    background: rgb(0,28,26);
+    background: -moz-linear-gradient(0deg, rgba(0,28,26,1) 0%, rgba(67,187,228,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,28,26,1) 0%, rgba(67,187,228,1) 100%);
+    background: linear-gradient(0deg, rgba(0,28,26,1) 0%, rgba(67,187,228,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#001c1a",endColorstr="#43bbe4",GradientType=1);
     padding: 20px;
     text-align: center;
     color: white;
@@ -64,6 +68,7 @@ main{
     overflow: auto;
     font-size: 1.4rem;
     line-height: 1.5em;
+    margin-bottom: 25px;
 }
 
 .paragraph{
@@ -103,34 +108,47 @@ h3{
 }
 
 
-
+table{
+    border-bottom: 2px solid rgb(45, 101, 255);
+}
 table caption{
     font-style: italic;
     font-weight: 600;
 }
 
 table thead{
-    background-color: blue;
+    background-color: rgb(45, 101, 255);
     color: white;
     height: 100px;
+    table-layout: fixed;
 
 }
 
 tr:nth-child(even) { 
        background-color: rgba(128, 128, 128, 0.226);
+       border-top: 1px solid grey;
+       border-bottom: 1px solid grey;
+
 }
 
-td{
+td, th{
     text-align: center;
     overflow: auto;
+    padding: 10px;
+}
+
+#year{
+    
 }
 
 #video{
     border-radius: 10%;
+    width: 100%; 
+    
 }
 
 #newsletter{
-    background-color: rgb(165, 164, 164);
+    background-color: lightgray;
     padding: 20px;
 }
 
@@ -142,16 +160,19 @@ td{
 }
 
 #button{
-    background-color: blue;
+    background-color: rgb(45, 101, 255);
     color: white;
     width: 100px;
     height: 30px;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    border: 0;
+    font-weight: 600;
 }
 
 #mail {
     width: 250px;
     height: 30px;
+    border: 0;
     border-bottom: 1px dashed black;
     font-size: 1.3rem;
 }
@@ -163,13 +184,52 @@ td{
 }
 
 .article{
-    margin: 20px;
+    margin-bottom: 20px;
     background-color: lightgrey;
     padding: 25px;
+    padding-bottom: 0;
+    border: 1px solid grey;
+    margin-bottom: 25px;
 }
 
 .data{
     font-size: 1.2rem;
+    padding-left: 170px;
+    line-height: 6rem;
+}
+
+.label{
+    padding: 5px;
+}
+
+.calendar{
+    padding: 5px;
+}
+
+.link{
+    color: rgb(10, 143, 192);
+    font-weight: bold;
+}
+
+footer{
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,102,113,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,102,113,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(8,102,113,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#086671",GradientType=1);
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.349);
+    font-size: 1.1rem;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.5rem;
+    
+}
+
+footer a{
+    color: purple;
+    font-weight: bold;
+    font-size: larger;
 }
 
 
