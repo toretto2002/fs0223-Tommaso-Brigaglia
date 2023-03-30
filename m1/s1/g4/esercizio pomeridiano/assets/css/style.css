@@ -1,8 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 /* IMPOSTAZIONI GENERALI */
+
+:root{
+    font-family:  'Poppins', sans-serif;
+}
+
+
+body{
+
+    background: url(../img/sfondo.png);
+    background-attachment: fixed;
+    padding: 20px;
+    
+}
 
 /* HEADER */
 
+#head{
+    background-color: rgb(13, 130, 150);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.349);
+    
+}
+
+#logo{
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#list-menu{
+    list-style: none;
+    padding: 10px;
+    
+
+}
+
+#list-menu li{
+    border: 10px;
+    padding: 5px;
+}
+
+.nav-menu{
+    color: white;
+    text-decoration: none;
+    
+}
+
 /* MAIN */
+
+main{
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.349);
+    padding-top: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: auto;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+
+.paragraph{
+    margin-bottom: 25px;
+}
+
+.list{
+    padding-left: 40px;
+    margin-bottom: 25px;
+}
+
+h3{
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.4em;
+    margin-bottom: 25px;
+    }
+
+.autor{
+    color: rgb(159, 159, 159);
+    margin-bottom: 25px;
+    line-height: 1em;
+}
+
+#pen{
+    color: white;
+    background-color: rgb(159, 159, 159) ;
+    font-size: 1rem;
+    padding: 4px;
+    margin: 2px;
+    border-radius: 15%;
+}
+
+.mark{
+    color:rgb(173, 0, 173);
+    font-weight: 600;
+}
+
+
+
+table caption{
+    font-style: italic;
+    font-weight: 600;
+}
+
+table thead{
+    background-color: blue;
+    color: white;
+    height: 100px;
+
+}
+
+tr:nth-child(even) { 
+       background-color: rgba(128, 128, 128, 0.226);
+}
+
+td{
+    text-align: center;
+    overflow: auto;
+}
+
+#video{
+    border-radius: 10%;
+}
+
+#newsletter{
+    background-color: rgb(165, 164, 164);
+}
+
+
+
+
+
 
 /* ELEMENTI NEL MAIN - ARTICLE */
 
