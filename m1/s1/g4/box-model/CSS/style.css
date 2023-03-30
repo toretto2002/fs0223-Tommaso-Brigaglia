@@ -1,0 +1,51 @@
+
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#q2{
+    overflow: auto;
+}
+
+#q3{
+    background-color: red;
+    max-width: 600px;
+    height: 50px;
+}
+
+#q4{
+    border: 2px solid yellow;
+    padding: 15px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#q5{
+    padding: 15px;
+    border: 10px outset black;
+}
+
+#q5:active{
+
+    background-color: aquamarine;
+    border: 10px inset gray;
+
+}
+
+#q6{
+    border-radius: 100%;
+    border-top-right-radius: 12%;
+    border: 10px solid orange;
+    border-top: none;
+    margin:0 auto;
+}
+
+/* il padding si somma alla dimensione che dò all'elemento!! a meno che non utilizzi box-sizinig */
+
+
+
+/*non posso usare width e height sui tag linea!!!  */

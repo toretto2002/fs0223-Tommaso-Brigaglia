@@ -1,0 +1,43 @@
+
+/* 
+posso selezionare tramite attriputo
+input[type="checkbox"]{
+    width: 100px;
+    height:100px;
+} */
+
+/* #check{
+    width: 100px;
+    height: 100px;
+} */
+
+
+/* width: 10px;
+    height: 10px; */
+
+
+#menù{
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+}
+
+#check{
+    display: none;
+}
+
+
+#check:checked + #menù{
+
+    height: 200px;
+
+
+    
+}
+
+/* escludo il primo fglio, GLI a NON PRENDONO LO STIULE DAI GENITORI!! devo darglielo io */
+#menù li:not(:first-child) a{
+    color: red;
+}
+
+
