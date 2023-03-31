@@ -42,6 +42,7 @@ p{
 
 #incipit{
     background-image: url(../images/banner.jpg);
+    background-size: contain;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 35px;
@@ -148,7 +149,45 @@ button{
 }
 
 footer{
+    background-color: #25a2c3;
     text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #c8e7f0;
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+}
+
+footer h5{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+
+}
+
+footer a{
+    color: #c8e7f0;
+
+}
+footer i{
+    color:white;
+}
+
+footer div{
+    line-height: 1.65rem;
+}
+
+#copyrights{
+    margin-top: 25px;
+    font-size: 0.9rem;
+    border-top: 1px solid #c8e7f0;
+    padding-top: 30px;
+}
+
+#border{
+    padding-left: 150px;
+    padding-right: 150px;
+
 }
 
 
