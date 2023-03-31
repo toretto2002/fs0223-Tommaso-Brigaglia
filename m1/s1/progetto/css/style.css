@@ -1,1 +1,154 @@
 /* Your styles here */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+img{
+    width: 100%;
+}
+
+header{
+    background-color: black;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 50px;
+   
+}
+
+#logo{
+    width: 125px;
+}
+
+main{
+    text-align: center;
+}
+
+h1, h3, h4, h5{
+    font-family: 'Montserrat', sans-serif;
+    color: #25a2c3;
+    font-weight: 700;
+    line-height: 1.5;
+    
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    color: #393d41;
+    font-size: 1.2rem;
+    line-height: 1.65;
+}
+
+#incipit{
+    background-image: url(../images/banner.jpg);
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 35px;
+    padding-top: 40px;
+    }
+
+#incipit h1{
+    font-size: 2rem;
+    margin-bottom: 25px;
+
+}
+
+#title{
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+button{
+    background-color: #f04c2f;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    border: 0;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 7%;
+    margin-top: 30px;
+}
+
+.catching-sentences{
+    padding: 35px;
+}
+
+.catching-sentences h3{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#rounded{
+    border-radius: 100%;
+    
+}
+
+#round-padding{
+    padding-left: 50px;
+    padding-right: 50px;
+
+}
+
+#sections{
+    padding: 20px;
+}
+
+.img-sentence{
+    border: 1px solid #dee1e3;
+    margin-bottom: 25px;
+}
+
+.caption{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.caption h5{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.testimony{
+    background-color: #e22d0e;
+    color: white;
+    padding-top: 45px;
+    padding-bottom: 30px;
+}
+
+.testimony p{
+    color: white;
+    font-style: italic;
+    
+}
+
+.testimony h4{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+#role{
+    font-style: normal;
+    font-size: 0.9rem;
+
+
+}
+
+#name{
+    font-style: normal;
+    margin-top: 30px;
+
+}
+
+footer{
+    text-align: center;
+}
+
+
