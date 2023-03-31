@@ -42,7 +42,8 @@ p{
 
 #incipit{
     background-image: url(../images/banner.jpg);
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 35px;
