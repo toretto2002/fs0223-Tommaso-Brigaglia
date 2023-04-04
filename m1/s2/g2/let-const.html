@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        
+        var a = 0;
+        {
+            console.log(a) // raggiungibile perchè è fuori dal blocco
+        }
+
+        {
+            var b = 0;
+        }
+        console.log(b) //raggiungibile perchè è una var
+        
+        // let è soggetta a blockscope
+        let c = 1;
+
+        {
+            console.log(c) //raggiungibile perchè è fuori dal blocco
+        }
+
+        {
+            let d = 2;
+        }
+
+        // console.log(d) //non raggiungibile perchè nasce nel blocco precedente
+
+        const NOME_UTENTE = 'Mario'
+
+        // NOME_UTENTE = 'Giaocmo' => errore non posso modificare una costante 
+
+        const OGGETTO = {
+
+            nome: 'Mario',
+
+            anni: 30
+        }
+
+        //Object.freeze(OGGETTO); => per bloccare i anche i valori annidati dentro
+
+        OGGETTO.nome = 'Maria';
+        console.log(OGGETTO);
+
+        // scope variabili nelle funzioni
+
+        let p = 0;
+
+        function prova(){
+            console.log(p) //raggiunge la variabile p
+        }
+
+        prova();
+
+        function prova2(){
+           let y = 200;
+        }
+
+        console.log(y) //non raggiungibile perchè dichiarata nella funzione
+
+        
+
+    </script>
+</body>
+</html>
