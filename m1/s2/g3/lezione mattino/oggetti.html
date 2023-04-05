@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+
+        {
+            let pizza = {
+                gusto : 'Margherita',
+                prezzo : 5,
+                aggiunte : {
+                    doppiaMOzzarella : 1,
+                    basilico : 0.5,
+                },
+                mostraPrezzo : function() {
+                    console.log(`il prezzo della pizza ${this.gusto} è pari a ${this.prezzo}`);
+                },    
+            };
+        }
+
+        // // lettura
+        // console.log(pizza.gusto);
+        // console.log(pizza.aggiunte.basilico); 
+
+        // //scrittura
+        // pizza.gusto = '4 formaggi';
+
+        // // document.getElementById(); // => metodo (sta dentro l'oggetto)
+        // // alert(); // => funzione
+
+        // //lancio un metotdo
+        // pizza.mostraPrezzo();
+
+        {
+            // costruttore degli oggetti
+            function Pizza(_gusto, _prezzo){
+                this.gusto = _gusto;
+                this.prezzo = _prezzo;
+                this.mostraPrezzo = function() {
+                    console.log(`il prezzo della pizza ${this.gusto} è pari a ${this.prezzo}`);
+                }    
+            }
+
+            let margherita = new Pizza('Margherita', 5); // creo un oggetto ogni volta che la chiamo
+
+            let diavola = new Pizza('Diavola', 1);
+
+            console.log(margherita, diavola);
+
+            margherita.mostraPrezzo();
+            diavola.mostraPrezzo();
+            
+            // aggiunta di una proprietà a tutti gli oggetti della classe pizza utilizzando la proprietà prototype
+           
+            Pizza.prototype.aggiunte = {
+                    doppiaMOzzarella : 1,
+                    basilico : 0.5,
+            }
+
+            console.log(`il prezzo per la doppia mozzarella è ${margherita.aggiunte.doppiaMOzzarella}`); 
+
+            
+        }
+
+      
+
+
+       
+            
+
+
+       
+        
+    </script>
+</body>
+</html>
