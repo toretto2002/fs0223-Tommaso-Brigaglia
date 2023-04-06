@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //ciclo gli array
+        //va bene per qualunque operazione sugli array
+        let menu = ['Margherita', 'Marinara', 'Diavola', 'Panna e speck'];
+
+        menu.forEach(function(pizza){
+            document.write(pizza + '<br/>');
+        });
+
+        //map
+        //tutte le volte che dobbiamo modificare il valore di un array
+
+        let numeri = [1, 2, 3, 4, 5, 6];
+
+        // map non modifica l'array originale ne crea uno nuovo
+        let numeriX2 = numeri.map(function(n){
+            return n*2;
+        });
+
+        console.log(numeriX2);
+
+        document.write('<hr/>')
+
+        //uso lo stesso for each di prima
+
+        menu = ['Margherita', 'Marinara', 'Diavola', 'Panna e speck'];
+
+        menu = menu.map(function(pizza){
+            return `<b>${pizza}</b>`;
+        });
+
+        menu.forEach(function(pizza){
+
+            document.write(pizza + '<br/>');
+
+        });
+
+        numeri = [56, 2, -4, 59, 5, -89];
+
+        let numeriFiltrati = numeri.filter(function(n){
+            return n >= 2; //filtra in base alla regola che dò al return (true o false)
+        });// devo generare un boolean !!!!!posso filtrare anche oggetti!!!!
+
+        console.log(numeriFiltrati);
+
+        let menuCompleto = [
+            {
+                gusto: 'Margherita',
+                prezzo: 5,
+                disponibile: false
+            },
+            {
+                gusto: 'Diavola',
+                prezzo: 1,
+                disponibile: true
+            },
+            {
+                gusto: 'Hawayana',
+                prezzo: 5000,
+                disponibile: true 
+            }
+        ]
+
+        let menuFiltrato = menuCompleto.filter(function(pizza){
+            return pizza.disponibile
+        })
+
+        console.log(menuFiltrato);
+
+        //find
+
+        numeri = [56, 2, -4, 59, 5, -89];
+
+        let numeroFiltrato = numeri.find(function(n){
+            return n > 20 
+        })
+
+        console.log(numeroFiltrato);
+
+        //indexOf
+
+        menu = ['Margherita', 'Marinara', 'Diavola', 'Panna e speck'];
+
+        let positione = menu.indexOf('Marinara');
+
+        menu.splice(positione, 1); // rimuove tutti gli elementi a partire dall'indice col numero dopo la virgola gli dico quanti eliminarne in questo caso 1.
+
+        console.log(menu);
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
