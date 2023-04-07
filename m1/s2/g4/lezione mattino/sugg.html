@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="display">
+    <button onclick="total()">Calcola</button>
+    <button onclick="svuota()">Cancella</button>
+
+    <script>
+
+        let display = document.getElementById('display');//quando ricevo un elemento da html javascript lo vede come oggetto
+
+        console.log(display.value);
+
+        
+
+        // display.value = 'ciao';
+
+        function total(){
+            let display = document.getElementById('display');//quando ricevo un elemento da html javascript lo vede come oggetto
+            display.value = eval(display.value)
+        }
+
+        function svuota(){
+            let display = document.getElementById('display');
+            display.value = '';
+        }
+
+    </script>
+</body>
+</html>
