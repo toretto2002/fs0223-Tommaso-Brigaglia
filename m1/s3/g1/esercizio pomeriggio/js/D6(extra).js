@@ -259,7 +259,3 @@ console.log(antiSpam(string));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
-function matrixGenerator(x, y){
-    for(let i = 0; i)
-}
