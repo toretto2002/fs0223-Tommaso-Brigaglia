@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let prova = () => {
+            console.log('invocata');
+        }
+
+        prova();
+        
+        let provaReturn = () => 'Dato restituito'; // il return è implicito serve per scrivere delle funzioni brevi one-line, se devo scrivere più di una riga mi servono le graffe e il return
+        
+        console.log(provaReturn());
+
+        //fn freccia a singolo parametro in cui posso omettere le tonde (SOLO SE è A SINGOLO PARAMETRO)
+
+       let grassetto = stringa => `<b>${stringa}</b>`;
+        
+       //più di un parametro servono le tonde
+
+       let somma = (a,b) => a + b;// return sottinteso
+       console.log(somma(8,2));
+
+       let array = [1,2,3,4];
+
+       let res2 = array.map(n => n*2);
+       console.log(res2);
+
+    </script>
+</body>
+</html>

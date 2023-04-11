@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="testo"></div>
+    <script>
+
+
+        function scrivi(str){
+            let testo = document.getElementById('testo');
+            testo.innerHTML += str
+        }
+        
+        scrivi('Hello wordl!');
+        scrivi('<br>');
+        scrivi('Ciao Mondo');
+
+        //callbacks
+
+        function scriviPro(str, fn){
+            let testo = document.getElementById('testo');
+            testo.innerHTML += fn(str)
+        }
+        
+        function grassetto(stringa){
+            return `<b>${stringa}</b>`
+        }
+
+        function corsivo(stringa){
+            return `<i>${stringa}</i>`
+        }
+
+        scriviPro('testo aggiunto grassetto', grassetto);
+        scriviPro('testo aggiunto corsivo', corsivo);
+
+        //FUNZIONI ANONIME
+
+        let prova = function(){
+            console.log('funziona');
+        }
+
+        console.log(prova);// vedo il contenuto della funzione
+
+        prova();
+
+        //self invoking
+
+        (function(){
+            console.log('self invoked');
+        })();// le parantesi finali servono ad invocarla
+
+        let dato = (function(){
+            //richiesta di dati al server
+            return 'dati';// dati finisce dentro dato
+        })()
+
+        //scope delle variabili nelle funzioni 
+
+        let pizze = ['margherita', 'marinara']
+        let secondi;
+        function testScope(){
+            console.log(pizze);// la varibile globale è visibile all' interno della funzione
+            var primi = ['pasta al pomodoro', 'carbonara']
+            secondi = ['Parmigiana', 'Pollo arrosto']
+        }
+
+        testScope();
+
+        //console.log(primi);//mi da errore perchè ciò che è dichiarato nella funzione sta nella funzione 
+        console.log(secondi);//riesce ad accedere alla variabile perchè è dichiararta fuori dalla funzione
+
+        function genitore(){
+            let nome = 'mario'
+            function figlio(){
+                console.log(nome);//funziona perchè nome è globale rispetto alla funzione figlio
+                let cognome = 'rossi'; //appartine solo alla funzione figlio genitore non la vede
+            }
+            figlio();
+        }
+    </script>
+</body>
+</html>
