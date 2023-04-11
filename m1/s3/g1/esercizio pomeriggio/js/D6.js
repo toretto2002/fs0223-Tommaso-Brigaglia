@@ -145,18 +145,21 @@ console.log(reverseString('EPICoDe'))
 
 function upperFirst(str){
 
-    str[0] = str[0].toUpperCase();
+    let wordsArray = str.split(" ");
+    let capitalizedWords = [];
+    for (word of wordsArray){
 
-    for (let i = 0; i < str.length; i++) {
-        if(str[i] == ' '){
-            str[i+1] = str[i+1].toUpperCase();
-        }
+        let firstLetter = word[0].toUpperCase()
+        // console.log(firstLetter);
+        word = firstLetter + word.slice(1)
+        capitalizedWords.push(word)
     }
-    
-    return str;
+    return capitalizedWords.join(' ')
 }
 
-console.log(upperFirst('ciao mi chiamo tommaso'));
+let risultato = upperFirst('La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.')
+
+console.log(risultato);
 
 
 /* ESERCIZIO 9
@@ -195,4 +198,4 @@ function giveMeRandom(n){
     return arr
 }
 
-console.log(giveMeRandom(5))
+console.log(giveMeRandom(7))
