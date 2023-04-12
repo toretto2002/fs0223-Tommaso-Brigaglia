@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>              
+<body>
+    
+    <script>
+
+        let now = new Date();
+
+        let anno = now.getFullYear();
+        let day = now.getDay();// indice del giorno parte da domenica e va da 0 a 6
+
+        let monthDay = now.getMonth();
+        let time = now.getTime();
+      
+        console.log(anno, day, monthDay, time);
+
+        now.setMonth(10);
+
+        monthDay = now.getMonth();
+
+        console.log(now);
+
+        //data ad un mese da oggi
+
+        let future = new Date();
+
+        future.setMonth(future.getMonth());
+
+        console.log(future);
+
+        //localizzare le date
+
+        let options = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+        }
+        let dataItaliano = future.toLocaleDateString('it-IT', options);
+
+        console.log(dataItaliano);
+
+    </script>
+</body>
+</html>
