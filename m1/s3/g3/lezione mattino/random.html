@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+    </style>
+</head>
+<body>
+
+    <button id="cambia">cambia colore</button>
+    <script>
+        let rand = Math.floor(Math.random() * 10);//da 0 a 9
+        
+        function generaColorRgb(){
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256); 
+            
+            let colore = `rgb(${r}, ${g}, ${b})`;
+
+            return colore;
+        
+        }
+
+        let bottone = document.querySelector('#cambia');
+
+        bottone.addEventListener('click', function(){
+            document.querySelector('body').style.backgroundColor = generaColorRgb();
+        })
+
+
+        generaColorRgb();
+
+       
+
+
+        console.log(rand);
+    </script>
+</body>
+</html>

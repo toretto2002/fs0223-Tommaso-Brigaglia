@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="test">Hello world</div>
+
+    <div class="blocco">1</div>
+    <div class="blocco">2</div>
+    <div class="blocco">3</div>
+    <div class="blocco">4</div>
+
+    <ul id="menu">
+        <li>Item</li>
+        <li>Item</li>
+        <li id="no-bg">Item</li>
+        <li>Item</li>
+    </ul>
+
+    <ul>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    
+    <script>
+
+    //funzioni classiche per selezionare elementi del dom
+        {
+            let test = document.getElementById('test');
+
+            console.dir(test);
+            test.textContent = 'Ciao mondo'//modifico il contenuto testuale
+            test.style.backgroundColor = 'red'//modifico la prprietà backgroundColor dello stile inline
+            test.style.backgroundColor = ''//facendo così svuoto il valore della prprietà backgroundColor
+
+            let blocchi = document.getElementsByClassName('blocco');
+            //restituisce un HTMLCollection che non ha a disposizione molti metodi degli array
+            //utilizza Array.from() per ricavare un array normale
+
+            console.log(blocchi);
+            blocchi[1].style.backgroundColor = 'blue'//modifico il singolo elemento
+
+            for(let el of blocchi){
+                el.style.backgroundColor = 'green';//ciclo per modificarli tutti
+            }
+
+            Array.from(blocchi).forEach(element => element.style.backgroundColor = 'blue')
+
+            let div = document.getElementsByTagName('div');//restituisce sempre un HTMLCollection
+
+            console.log(div);
+        }
+    //funzioni nuove per selezionare elementi del dom
+    
+        {
+            let div = document.querySelector('#test');//restitusce un solo elemento
+
+            let blocco1 =  document.querySelector('.blocco');//restitusce un solo elemento, il primo se parliamo di una lista 
+
+            let blocchi = document.querySelectorAll('.blocco');//restituisce una Nodelist che posso trattare come un array normale
+
+            console.log(blocchi);
+
+            blocchi.forEach(element => element.style.border = '1px solid lightblue');//infatti posso usare i metodi degli array
+
+            //esempio di query di css più articolata
+            let li = document.querySelectorAll('#menu li:not(#no-bg)');
+
+            li.forEach(el => el.style.backgroundColor = 'lightblue');
+
+        }
+
+
+    </script>
+</body>
+</html>

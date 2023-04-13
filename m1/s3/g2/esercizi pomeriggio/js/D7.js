@@ -229,10 +229,11 @@ const movies = [
 */
 
 function oldestMovie(movies){
-  let oldest = 2050;
+  let oldestyear = 2050;
+  let oldest = {}
   for(film of movies){
-    if(film.Year < oldest){
-      oldest = film.Year
+    if(film.Year < oldestyear){
+      oldest = film
     }
   }
   return oldest;
