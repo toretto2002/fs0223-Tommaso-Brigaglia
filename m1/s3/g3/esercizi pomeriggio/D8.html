@@ -81,90 +81,126 @@
     */
 
     const changeTitle = function () {
-
-
+      let titolo = document.querySelector('h1');
+      titolo.innerText = 'ho cambiato il titolo'
     }
+
+    changeTitle();
 
     /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
 
     const addClassToTitle = function () {
-
-
+      let titolo = document.querySelector('h1');
+      titolo.classList.add('myHeading');
     }
+
+    addClassToTitle();
 
     /* ESERCIZIO 3
        Scrivi una funzione per che cambi il testo dei p figli di un div
       */
 
     const changePcontent = function () {
-
-
+      let paragrafi = document.querySelectorAll('div p');
+      paragrafi.forEach( paragrafi => paragrafi.innerText = 'ho cambiato i p');
     }
+
+    changePcontent();
 
     /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
 
     const changeUrls = function () {
-
-
+      let links = document.querySelectorAll('a:not(footer a)');
+      links.forEach( link => link.href = 'http://www.google.com' );
     }
+
+    changeUrls();
 
     /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
 
     const addToTheSecond = function () {
-
-
+      let lis = document.querySelectorAll('#secondList li');
+      let newli = document.createElement('li');
+      newli.innerText = 'creato da me'
+      lis[lis.length-1].append(newli);
     }
+
+    addToTheSecond();
 
     /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un secondo paragrafo al primo div
     */
 
     const addParagraph = function () {
-
-
+      let paragrafo = document.querySelector('div p');
+      let newparagraph = document.createElement('p');
+      newparagraph.innerText = 'nuovo paragrafo!'
+      paragrafo.appendChild(newparagraph);
     }
+
+    addParagraph();
+
+
 
     /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
     */
 
     const hideFirstUl = function () {
-
-
+      let primaLista = document.querySelector('#firstList');
+      primaLista.innerHTML = '';
     }
+
+   
 
     /* ESERCIZIO 8 
        Scrivi una funzione che renda verde il background di ogni lista non ordinata
       */
 
     const paintItGreen = function () {
-
-
+      let liste = document.querySelectorAll('ul');
+      console.log(liste);
+      liste.forEach(lista => lista.style.backgroundColor = 'green' );
     }
+
+    paintItGreen();
 
     /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
       */
 
     const makeItClickable = function () {
-
+      let titolo = document.querySelector('h1');
+      titolo.addEventListener('click', function(){
+        let content = titolo.innerText;
+        let newcontent = content.slice(0, -1);
+        console.log(newcontent);
+        titolo.innerText = newcontent
+      })
 
     }
+
+    makeItClickable(); 
 
     /* ESERCIZIO 10
        Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
       */
 
     const revealFooterLink = function () {
-
-
+      let footer = document.querySelector('footer');
+      footer.addEventListener('click', function(){
+        let link = document.querySelector('footer a');
+        alert(link.href);
+      });
     }
+
+    revealFooterLink();
 
     /* ESERCIZIO 11
        Crea una funzione che crei una tabella nell'elemento con id "tableArea". 
@@ -173,8 +209,32 @@
 
     const generateTable = function () {
 
+      let tableHeadcontent = ['immagine', 'quantità', 'prezzo', 'nome prodotto']
+      let tableContent = ['marco', 'antonio', 'giacomo', 'francesco', 'matteo']
+      let theadings;
+      let table = document.createElement('table');
+      table.id = 'tableArea';
+      for (let item of tableHeadcontent) {
+        theadings = document.createElement('th')
+        theadings.innerText = item
+        table.append(theadings)
+      }
 
+      let tableBody = document.createElement('tr');
+      table.appendChild(tableBody);
+      tableBody.id = 'prima-riga'
+
+      for(let item of tableContent){
+        let td = document.createElement('td')
+        td.innerText = item
+        tableBody.append(td)
+        td.classList = 'casella'
+      }
+      console.log(table)
+      let div = document.querySelector('div');
+      div.append(table);
     }
+     generateTable();
 
     /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
@@ -182,35 +242,70 @@
 
     const addRow = function () {
 
-
+      let tableContent = ['marco', 'antonio', 'giacomo', 'francesco', 'matteo']
+      let table = document.querySelector('#tableArea');
+      let tableBody = document.createElement('tr');
+      tableBody.id = 'seconda-riga'
+      table.appendChild(tableBody);
+      for(let item of tableContent){
+        let td = document.createElement('td')
+        td.innerText = item
+        tableBody.append(td)
+        td.classList = 'casella'
+      }
     }
+    addRow();
 
     /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
     const hideAllImages = function () {
-
+      let rows = document.querySelectorAll('#tableArea tr');
+      console.log(rows);
+      let primaImg = document.querySelector('#prima-riga td')
+      let secondaImg = document.querySelector('#seconda-riga td')
+      primaImg.style.visibility = 'hidden';
+      secondaImg.style.visibility = 'hidden';
 
     }
+
+    //hideAllImages(); funziona solo in questo caso non sempre!
 
     /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
     const changeColorWithRandom = function () {
-
+      let h2 = document.querySelector('h2');
+      h2.addEventListener('click', function () {
+        
+        let r = Math.floor(Math.random() * 256)
+        let g = Math.floor(Math.random() * 256)
+        let b = Math.floor(Math.random() * 256)
+        
+        h2.style.color = `rgb(${r}, ${g}, ${b})`
+      })
 
     }
+
+    changeColorWithRandom();
 
     /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
     */
 
     const deleteVowels = function () {
+      let tuttoTesto = document.querySelectorAll('h1, h2, div, p, ul, a, h3');
+      console.log(tuttoTesto);
 
+      for(testo of tuttoTesto){
+        
+      }
 
     }
+
+    deleteVowels();
 
   </script>
 </body>
