@@ -240,7 +240,6 @@ function onlyLetters(str) {
   for(let numero of numeri) {
     for (let index = 0; index < str.length; index++) {
       let indice = str.indexOf(numero);
-      console.log(indice);
       if (indice != -1) {
         str = str.slice(0, indice) + str.slice(indice + 1, str.length).trim();
       }
@@ -447,16 +446,60 @@ console.log(sumAllTheYears(movies));
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
 
+function searchByTitle(movies, title) {
+  let search = [];
+  title = title.toLowerCase();
 
+  for(let movie of movies) {
+    let toSearch = movie.Title.toLowerCase();
+    if(toSearch.indexOf(title) > -1) {
+      search.push(movie);
+    }
+  }
+  if(search.length == 0) {
+    return 'il film che stai cercando non è qui ;)'
+  }
+
+  return search;
+}
+
+console.log(searchByTitle(movies, "star wars"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
 
+function searchAndDivide(movies, title) {
+  let match = [];
+  let unmatch = [];
+  title = title.toLowerCase();
+  for(let movie of movies) {
+    let toSearch = movie.Title.toLowerCase();
+    if(toSearch.indexOf(title) > -1) {
+      match.push(movie);
+    } else {
+      unmatch.push(movie);
+    }
+  }
+  return {
+    match: match,
+    unmatch: unmatch
+  };
+}
+
+console.log(searchAndDivide(movies, "lord"));
+
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
+
+function removeIndex(movies, index) {
+  movies.splice(index, 1);
+  return movies;
+}
+
+console.log(removeIndex(movies, 5));
 
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
@@ -464,29 +507,91 @@ console.log(sumAllTheYears(movies));
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function selectElement() {
+  let container = document.getElementById("container");
+  return container;
+}
+
+console.log(selectElement().innerText);
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+
+function selectTd(){
+  let tds = document.querySelectorAll('td')
+  return tds;
+}
+
+console.log(selectTd());
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+function printTd() {
+  let tds = document.querySelectorAll('td')
+  for(let td of tds) {
+    console.log(td.innerText);
+  }
+}
+
+printTd();
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
+
+function addBackgroundLinks() {
+  let links = document.querySelectorAll('a');
+  for(let link of links) {
+    link.style.backgroundColor = "red";
+  }
+}
+
+addBackgroundLinks();
 
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
 
+function addElementUl(){
+  let ul = document.getElementById("myList");
+  let newLi = document.createElement("li");
+  newLi.innerText = "New element";
+  newLi.style.backgroundColor = "yellow";
+  ul.appendChild(newLi);
+}
+
+addElementUl();
+
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function removeElementUl() {
+  let ul = document.getElementById("myList");
+  ul.innerHTML = "";
+}
+
+removeElementUl();
+
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+function addClass() {
+  let trs = document.querySelectorAll('tr');
+  for(let tr of trs) {
+    tr.classList.add("test");
+  }
+}
+
+addClass();
+
+console.log(document.querySelectorAll('.test'));
+
 
 // [EXTRA] JS Avanzato
 
@@ -502,6 +607,36 @@ console.log(sumAllTheYears(movies));
 
 */
 
+function halfTree(n){
+  let count = 1;
+
+  while(count <= n){
+    
+    let ramo = branchHalfTree(count)
+    if(ramo){
+      console.log(ramo);  
+    }
+    count++
+  }
+}
+
+halfTree(10)
+
+function branchHalfTree(n){
+  let ramo = ''
+  let count = 0;
+
+  while(count < n){
+    ramo += '*'
+    count++
+  }
+
+  console.log(ramo);
+}
+
+
+
+
 /* ESERCIZIO 28
   Crea una funzione chiamata "tree" che riceve un numero come parametro e costruisce un albero di "*" (asterischi) dell'altezza fornita.
 
@@ -514,9 +649,78 @@ console.log(sumAllTheYears(movies));
 
 */
 
+tree(25)
+
+function tree(n){
+  
+  let spaces = n - 1;
+  let ast = 1;
+  let count = 0;
+
+  while(count < n){
+    let ramo = branchTree(spaces, ast)
+    if(ramo){
+      console.log(ramo);  
+    }
+    ast += 2;
+    spaces--;
+    count++;
+  }
+
+}
+
+function branchTree(spaces, asts){
+  let countSpace = 0;
+  let countAst = 0;
+  let branch = '';
+
+  while(countSpace < spaces){
+    branch += ' ';
+    countSpace++;
+  }
+  while(countAst < asts){
+    branch += '*';
+    countAst++;
+  }
+  while(countSpace < spaces){
+    branch += ' ';
+    countSpace++;
+  }
+
+  return branch
+  
+}
+
+
+
+
+
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
+
+function isItPrime(n){
+
+  let div = Math.ceil(n / 2);
+  let flag = true;
+  let resto = 0;
+  if(n == 1){
+    return '1 nonostante sia divisibile solo per 1 e quindi anche per se stesso non è considerato primo'
+  }
+  if(n < 1){
+    return 'hai inserito un numero negativo!'
+  }
+  while(div > 1){
+    resto = n % div;
+    if(resto == 0){
+      flag = false
+    }
+    div--
+  }
+  return flag
+}
+
+console.log(isItPrime(49))
 
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 
