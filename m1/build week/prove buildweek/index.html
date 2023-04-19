@@ -27,8 +27,11 @@
             
 
             bottone.addEventListener('click', function(){
-                loadQuestions(requests, visitedIndex);
+                let domandeFinite = loadQuestions(requests, visitedIndex);
+                
             });
+
+            load4Answers(requests,  0);
 
 
         }
@@ -47,9 +50,9 @@
                 while(visitedIndex.indexOf(randomNumber) != -1){
                     randomNumber = Math.floor(Math.random()*10);
                     console.log(randomNumber);
-                    console.log(domandeObj.results.length);
-                    
+                    console.log(domandeObj.results.length);   
                 }
+
                 visitedIndex.push(randomNumber);
                 console.log(visitedIndex);
                 
@@ -63,6 +66,26 @@
                 }
 
                 
+            }
+
+            function load4Answers(domandeObj, indice){
+
+                let answers = [];
+                let indiceRandom = Math.floor(Math.random()*4);
+                let incorrectAnswer = domandeObj.results[indice].incorrect_answers;
+                let correctAnswer = domandeObj.results[indice].correct_answer;
+
+                
+                console.log(incorrectAnswer);
+                console.log(correctAnswer);
+
+                for (answer of incorrectAnswer){
+                    answers.push(answer)
+                }
+
+                answers.splice(indiceRandom, 0, correctAnswer)
+
+                console.log(answers);
             }
 
 
