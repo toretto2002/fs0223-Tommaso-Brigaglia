@@ -1,0 +1,25 @@
+main{
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1.5em;
+    background-color: rgba(238, 232, 170, 0.411);
+    color: rgb(70, 42, 42);
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 430px;
+}
+
+@media  screen and (min-width: 700px) {
+    main{
+        flex-direction: row;
+    }
+
+    img{
+        margin: 20px;
+        width: 600px;
+        height: 550px;
+    }
+}
