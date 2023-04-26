@@ -3,6 +3,7 @@ body{
     color: rgb(70, 42, 42);
     font-size: 1.2rem;
     width: 100%;
+    margin: 0;
 }
 
 nav{
@@ -155,20 +156,50 @@ article img{
 
 @media screen and (max-width: 660px) {
     
+    nav{
+        margin-bottom: 25px;
+        height: max-content;
+        padding: 10px;
+    }
+    
     nav ul{
+       
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
 
     nav ul li{
         order: 2;
+        margin: 10px 60px;
     }
 
     #shop-button{
         order: 1;
+        width: 60%;
+        align-self: flex-start;
+        margin: 0 100px;
     }
 
     article img{
         width: 100%;
     }
+ 
+}
 
+@media screen and (max-width: 465px) {
+
+ 
+    
+    nav ul li{
+        margin: 10px 25px;
+    }
+
+    nav{
+        width: fit-content;
+    }
+
+    article{
+        width: fit-content;
+    }
 }
