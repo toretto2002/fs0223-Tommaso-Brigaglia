@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* scriveremo il nostro css qui */
+        /* di default in un approccio mobile first il css senza media queries targhetterà schermi MOBILe. tramite le mediaqueris adatterò lo stile a schermi via via più grandi */
+
+        h1{
+            color: red;
+        }
+
+        body{
+            background-color: black;
+        }
+
+
+
+        @media screen and (min-width: 400px) {
+            /* il css che scriverò qui dentro sarà applicato solo a dispositivi con uno schermo e con larghezza  di almeno 400px ma minore di 699 */
+
+            h1 {
+                color: green;
+            }
+
+            body {
+                background-color: yellow;
+            }
+        }
+
+        @media screen and (min-width: 700px){
+
+            /* il css che scriverò qui dentro sarà applicato solo a dispositivi con uno schermo e con larghezza  di almeno 700px*/
+            
+            h1{
+                color: purple;
+            }
+
+            body{
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>LEZIONE SULLE MEDIAQUIRES</h1>
+    <h3>Vediamo come funzionano :)</h3>
+</body>
+</html>

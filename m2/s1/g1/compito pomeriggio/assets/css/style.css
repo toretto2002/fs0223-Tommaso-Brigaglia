@@ -97,7 +97,11 @@ main {
   padding: 2em 1em;
   margin-bottom: 1.5em;
   position: relative;
+<<<<<<< HEAD
   top: 240px;
+=======
+  top: 255px;
+>>>>>>> 6daabd59183ab288c4d2fea9494db812129a98fe
 }
 @media screen and (min-width: 700px) {
   main {
@@ -120,6 +124,7 @@ main {
 }
 
 #sottolineatura{
+<<<<<<< HEAD
   z-index: 1;
   opacity: 0.5;
 }
@@ -127,6 +132,14 @@ main {
   position: absolute;
   top: 135px;
   width: 450px;
+=======
+  z-index: -1;
+}
+.sottolineatura{
+  position: absolute;
+  top: 105px;
+  width: 100%;
+>>>>>>> 6daabd59183ab288c4d2fea9494db812129a98fe
   
 }
 
@@ -302,6 +315,7 @@ tbody tr:last-of-type {
   border-bottom: 2px solid #3f6bca;
 }
 
+<<<<<<< HEAD
 /* SIDE-BUTTONS */
 
 .buttons{
@@ -349,15 +363,20 @@ tbody tr:last-of-type {
 }
 
 
+=======
+>>>>>>> 6daabd59183ab288c4d2fea9494db812129a98fe
 /* FORM */
 
 #news{
   position: absolute;
+<<<<<<< HEAD
   top: -20px;
 }
 
 section {
   position: relative;
+=======
+>>>>>>> 6daabd59183ab288c4d2fea9494db812129a98fe
 }
 
 input {
@@ -401,6 +420,7 @@ aside div {
   border: 1px solid #c3c3c3;
   margin-bottom: 1em;
   padding: 1em;
+<<<<<<< HEAD
   position: relative;
 }
 
@@ -410,6 +430,8 @@ aside div .tags{
   top: 10px;
   opacity: 0.2;
   font-size: 5rem;
+=======
+>>>>>>> 6daabd59183ab288c4d2fea9494db812129a98fe
 }
 
 @media screen and (min-width: 1200px) {
