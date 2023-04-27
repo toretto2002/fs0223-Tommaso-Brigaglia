@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body > div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 5s;
+            margin-bottom: 10px;
+        }
+
+        body > div:hover{
+            width: 500px;
+        }
+
+        #div1{
+            transition-timing-function: ease;
+        }
+
+        #div1{
+            transition-timing-function: linear;
+        }
+
+        #div1{
+            transition-timing-function: ease-in;
+        }
+
+        #div1{
+            transition-timing-function: ease-out;
+        }
+
+        #div1{
+            transition-timing-function: ease-in-out;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <h1>curve di accelerazione</h1>
+
+    <div id="div1">
+        <div>ease</div>
+    </div>
+
+    <div id="div2">
+        <div>linear</div>
+    </div>
+
+    <div id="div3">
+        <div>ease-in</div>
+    </div>
+
+    <div id="div3">
+        <div>ease-out</div>
+    </div>
+
+    <div id="div3">
+        <div>ease-in-out</div>
+    </div>
+</body>
+</html>

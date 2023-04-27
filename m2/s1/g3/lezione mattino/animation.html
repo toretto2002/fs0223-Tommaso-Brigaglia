@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: orange;
+      }
+
+      .animated {
+        animation: boxAnimation 10s ease 0s infinite;
+      }
+
+      @keyframes boxAnimation {
+        0% {
+          transform: translate(0px);
+        }
+
+        20% {
+          transform: rotate(180deg) translate(-200px);
+        }
+
+        30% {
+          transform: rotate(180deg) translate(-300px);
+        }
+
+        50% {
+          transform: translate(1000px);
+          background-color: aqua;
+        }
+
+        75% {
+          transform: translate(700px, 100px);
+        }
+
+        100% {
+          transform: translate(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>animazioni in css</h2>
+    <div class="box">
+      <div>I'M A BOX</div>
+    </div>
+    <button onclick="startStop()">click me</button>
+
+    <script>
+      const startStop = function () {
+        let box = document.querySelector(".box");
+        box.classList.toggle("animated");
+        //toggle mi controllla se c'è la classe se non è presente la aggiunge se c'è la toglie
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .box{
+        width: 150px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    } 
+
+    .rotate{
+        background-color: lightgreen;
+        transform: rotate(30deg);
+    }
+
+    .skew{
+        background-color: peru;
+        transform: skew(10deg, 15deg);
+    }
+
+    .scale{
+        background-color: blueviolet;
+        transform: scale(1.4);
+    }
+    .translate{
+        background-color: darkslateblue;
+        transform: translate(50px, 25px);
+    }
+
+    .multiple{
+        background-color: darkred;
+        transform: scale(1.2) rotate(30deg) translate(50px, 50px);
+    }
+
+    h4{
+        position: relative;
+        z-index: 1;
+    }
+    
+    </style>
+</head>
+<body>
+    
+
+    <h2>PROPRIETA CSS TRANSFORM</h2>
+
+    <h4>ROTATE</h4>
+    <div class="box rotate">
+        <div>ROTATE</div>
+    </div>
+    <h4>SKEW</h4>
+    <div class="box skew">
+        <div>SKEW</div>
+    </div>
+    <h4>SCALE</h4>
+    <div class="box scale">
+        <div>SCALE</div>
+    </div>
+    <h4>TRANSLATE</h4>
+    <div class="box translate">
+        <div>TRANSLATE</div>
+    </div>
+    <h4>MULTIPLE</h4>
+    <div class="box multiple">
+        <div>MULTIPLE</div>
+    </div>
+</body>
+</html>
