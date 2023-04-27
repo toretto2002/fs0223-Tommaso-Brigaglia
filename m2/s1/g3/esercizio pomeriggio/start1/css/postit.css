@@ -1,0 +1,115 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2em;
+  width: 100%;
+}
+
+h4 {
+  font-weight: bold;
+  margin: 20px;
+}
+
+#blackboard {
+  background-color: rgb(69, 69, 69);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+}
+
+.post-it {
+  width: 250px;
+  height: 200px;
+  background-color: rgb(167, 167, 0);
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px black;
+  transition: all 200ms;
+}
+
+#post1 {
+  transform: rotate(-20deg);
+}
+
+#post2 {
+  transform: rotate(15deg);
+}
+
+#post3 {
+  transform: rotate(-5deg);
+}
+
+#post4 {
+  transform: rotate(-15deg);
+}
+
+#post5 {
+  transform: rotate(15deg);
+}
+
+#post6 {
+  transform: rotate(10deg);
+}
+
+#post7 {
+  transform: rotate(5deg);
+}
+
+#post8 {
+  transform: rotate(-7deg);
+}
+
+/* animazioni con :hover */
+
+#post1:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
+
+#post2:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
+
+#post3:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
+
+#post4:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
+
+#post5:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
+
+#post6:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
+
+#post7:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
+
+#post8:hover {
+  transform: rotate(0deg) scale(1.3);
+  z-index: 1;
+  box-shadow: 8px 8px 8px black;
+}
