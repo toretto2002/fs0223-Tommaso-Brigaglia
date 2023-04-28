@@ -115,6 +115,7 @@ svg {
 
 #article-container h5 img {
   margin-right: 20px;
+  padding-left: 10px;
 }
 
 article {
@@ -132,7 +133,7 @@ article {
 }
 
 #articles > div {
-  width: 350px;
+  width: 25%;
   margin: 10px;
   display: flex;
 }
@@ -270,7 +271,7 @@ aside h4{
     padding-bottom: 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.203);
     position: sticky;
-    top: 140px;
+    top: 160px;
 }
 
 #topics-container div{
@@ -288,8 +289,6 @@ aside ul{
 
 aside ul li{
     margin: 5px;
-    position: sticky;
-    top: 300px;
 }
 
 aside a{
@@ -304,4 +303,52 @@ aside a{
 .cambia-nav .black-buttons{
     color: white;
     background-color: green;
+}
+
+@media screen and (max-width: 552px){
+
+    .hidden{
+        display: none;
+    }
+
+
+    #headings{
+        width: 100%;
+        margin-left: 50px;
+    }
+
+    #headings p{
+        margin: 20px 0px;
+    }
+
+    #articles > div {
+        width: 300px;
+    }
+
+    #under-articles-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        font-size: 0.7em;
+    }
+
+    aside h4{
+        position: static;
+    }
+
+    aside{
+        width: 100%;
+    }
+    
+    #topics-container{
+        position: static;
+        width: 100%;
+        display: flex;
+    }
+
+    #recommended-articles-container > div {
+        margin-bottom: 100px;
+        width: 450px;
+      }
+    
+
 }
