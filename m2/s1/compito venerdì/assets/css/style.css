@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Spectral&display=swap");
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+.hero h1 {
+  font-family: Spectral, serif;
+}
+
+header {
+  background-color: #ffc017;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  border-bottom: 1px solid black;
+  position: fixed;
+  width: 100%;
+  background-color: #ffc017;
+  z-index: 1;
+  transition: all 1s;
+}
+
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 10px;
+}
+
+.hero {
+  padding-top: 70px;
+  height: 294px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  border-bottom: 1px solid black;
+}
+
+svg {
+  flex-shrink: 1;
+  position: absolute;
+  right: 0px;
+}
+
+#place-holder-svg {
+  width: 160px;
+}
+
+#headings {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+#headings h1 {
+  font-size: 5em;
+}
+
+#headings p {
+  width: 282px;
+}
+
+.black-buttons {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 20px;
+  transition: all 1s;
+}
+
+#get-started {
+  padding: 10px 40px;
+}
+
+.fixing-stars{
+    display: flex;
+    align-items: center;
+}
+
+.fixing-stars img{
+    margin:5px;
+}
+
+#article-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#article-container h5 {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+#article-container h5 img {
+  margin-right: 20px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+  margin-bottom: 30px;
+}
+
+#articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#articles > div {
+  width: 350px;
+  margin: 10px;
+  display: flex;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.article h6 {
+  margin: 5px 0px;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.authors {
+  display: flex;
+  align-items: center;
+}
+
+.authors p {
+  font-weight: bold;
+  font-size: 0.8em;
+}
+
+.authors img {
+  margin-right: 5px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.numbers {
+  font-size: 1.8em;
+  margin-right: 10px;
+  font-weight: bold;
+  opacity: 0.3;
+}
+
+.info {
+  font-size: 0.8em;
+  font-weight: bold;
+  opacity: 0.4;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#under-articles-container {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+
+#recommended-articles-container > div {
+  margin: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+}
+
+#recommended-articles-container > div > img {
+  width: 220px;
+  margin-left: 25px;
+}
+
+aside ul {
+  list-style-type: none;
+}
+
+#recommended-articles-container .article > p{
+    font-size: 1em;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.article h5 {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.under-articles {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.under-articles p {
+  font-size: 0.8em;
+  font-weight: bold;
+  opacity: 0.4;
+}
+
+.under-articles div {
+    background-color: rgba(0, 0, 0, 0.203);
+    margin: 0px 5px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: grey;
+    
+}
+
+.bookmark {
+  position: absolute;
+  right: 0px;
+}
+
+aside{
+    width: 35%;
+    
+}
+
+#aside-container{
+    top: 50px; 
+    height: 100%;
+}
+
+aside h4{
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    position: sticky;
+    top: 100px;
+}
+
+#topics-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.203);
+    position: sticky;
+    top: 140px;
+}
+
+#topics-container div{
+    border: 1px solid  rgba(0, 0, 0, 0.203);
+    padding: 5px;
+    margin: 5px;
+}
+
+aside ul{
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 300px;
+}
+
+aside ul li{
+    margin: 5px;
+    position: sticky;
+    top: 300px;
+}
+
+aside a{
+    text-decoration: none;
+    color: black;
+}
+
+.cambia-nav{
+    background-color: white;
+}
+
+.cambia-nav .black-buttons{
+    color: white;
+    background-color: green;
+}
