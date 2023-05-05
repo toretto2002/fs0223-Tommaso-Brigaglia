@@ -1,0 +1,37 @@
+@import 'partials/reset';
+
+#logo{
+    width: 100px;
+}
+
+#kids-logo{
+    width: 35px;
+}
+
+#dots{
+    width: 20px;
+}
+
+h1{
+    width: 260px !important;
+}
+
+.row{
+    transition: all 0.5s ease !important;
+    &::-webkit-scrollbar {
+    display: none !important;
+    }
+}
+
+.col{
+    transition: all 0.5s ease !important;
+}
+
+.container{
+    max-width: fit-content !important;
+    transition: all 0.5s ease !important;
+}
+
+footer .col{
+    flex-grow: 0 !important;
+}
