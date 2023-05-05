@@ -1,0 +1,8 @@
+@mixin floating{
+    border-radius: 5%;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.295);
+}
+
+@mixin grid($elements-on-row){
+    display: flex;
+}

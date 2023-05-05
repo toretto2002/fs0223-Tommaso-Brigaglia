@@ -1,0 +1,26 @@
+
+$text-color: #f4f4f4;
+$btn1-color: #0e6cff;
+$btn2-color: #ff8700;
+$btn3-color: #4caf50;
+$bg-color-header: #640fc5;
+
+body, a, button{
+    color: $text-color;
+}
+
+#find-more-btn{
+    background-color: $btn1-color;
+}
+
+#access-btn{
+    background-color: $btn2-color;
+}
+
+#contacts-btn{
+    background-color: $btn3-color;
+}
+
+header{
+    background-color: $bg-color-header;
+}
