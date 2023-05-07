@@ -54,4 +54,41 @@ table {
 
 a {
   text-decoration: none;
+}
+
+#logo {
+  width: 100px;
+}
+
+#avatar {
+  width: 125px;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+::-moz-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder {
+  color: white;
+}
+
+.btn:hover {
+  background-color: white !important;
+  font-weight: bold;
+  color: black !important;
+}
+
+#pen {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.checked {
+  background-color: white !important;
+  color: black !important;
 }/*# sourceMappingURL=style-profilepage.css.map */
