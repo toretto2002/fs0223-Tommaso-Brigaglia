@@ -1,0 +1,12 @@
+{
+  "name": "Tommaso",
+  "surname": "Brigaglia",
+  "age": 20,
+  "student": true,
+  "area": {
+    "region": "Lombardia"
+  },
+  "skills": [{ "javascript": {
+    "rate": 10
+  } }]
+}

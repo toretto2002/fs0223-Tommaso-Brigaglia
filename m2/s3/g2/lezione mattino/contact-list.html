@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        width: 300px;
+        margin: 0 auto;
+      }
+      h2 {
+        text-align: center;
+      }
+      input {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Rubrica</h2>
+      <form id="contact-form">
+        <div>
+          <input id="name" type="text" placeholder="Nome" />
+        </div>
+        <div>
+          <input id="surname" type="text" placeholder="Cognome" />
+        </div>
+        <div>
+          <input id="phone" type="text" placeholder="Telefono" />
+        </div>
+        <div>
+          <button id="save-button">Salva contatto</button>
+        </div>
+      </form>
+      <h3>Contatti Salvati</h3>
+      <ul></ul>
+    </div>
+    <script src="contact-list.js"></script>
+  </body>
+</html>
