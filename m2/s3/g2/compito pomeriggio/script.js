@@ -32,7 +32,7 @@ let timerField = document.getElementById("timer");
 let count = 0;
 
 setInterval(function () {
-  timerField.innerText = count;
+  timerField.innerText = count + "s";
   count += 1;
 }, 1000);
 
