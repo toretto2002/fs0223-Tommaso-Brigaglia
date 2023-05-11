@@ -10,6 +10,13 @@ const hide = function (index) {
   toHide.parentElement.classList.add("d-none");
 };
 
+const fillImageInModal = function (context) {
+  let imgIntoModal = document.querySelector("#img-modal img");
+  imgIntoModal.src =
+    context.parentElement.parentElement.parentElement.parentElement.querySelector(
+      "img"
+    ).src;
+};
 const loadImages = function (query) {
   fetch(`https://api.pexels.com/v1/search?query=${query}`, {
     headers: {
@@ -37,6 +44,7 @@ const loadImages = function (query) {
                 </a>
                 <div class="card-body d-flex flex-column justify-content-center">
                     <button id="hide-btn${count}" class="btn btn-success" onclick="hide(${count})">Hide</button>
+                    <button id="modal-btn${count}" class="btn btn-secondary mt-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop onclick="fillImageInModal(this)">View</button>
                     <p class="card-text mt-2">Image id: ${image.id}</p>
                 </div>
             </div>`;

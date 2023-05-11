@@ -24,7 +24,7 @@ const getSingleImage = function () {
 
       newCol.innerHTML = `
         <div class="card mt-5">
-            <img src="${photo.src.original}" class="card-img-top" alt="..." />
+            <img src="${photo.src.large}" class="card-img-top" alt="..." />
             <div class="card-body d-flex flex-column align-item-center">
                 <a class="w-auto text-align-center" href="${photo.photographer_url}">${photo.photographer}</a>
                 <a class="w-auto text-align-center" href="index.html">Torna Indietro</a>
