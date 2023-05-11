@@ -32,7 +32,9 @@ const loadImages = function (query) {
 
         newCol.innerHTML = `
             <div id="card${count}" class="card" style="width: 18rem">
-                <img src="${image.src.medium}" class="card-img-top" alt="..." />
+                <a href="sidepage.html?imageId=${image.id}">
+                    <img src="${image.src.medium}" class="card-img-top" alt="..." />
+                </a>
                 <div class="card-body d-flex flex-column justify-content-center">
                     <button id="hide-btn${count}" class="btn btn-success" onclick="hide(${count})">Hide</button>
                     <p class="card-text mt-2">Image id: ${image.id}</p>
@@ -61,7 +63,8 @@ LOAD_SECONDARY_BTN.addEventListener("click", () => {
 
 NAV_FORM.addEventListener("submit", (e) => {
   e.preventDefault();
-
+  console.log("clicac");
+  IMG_CONTAINER.innerHTML = "";
   let toSearch = document.querySelector("#nav-form input").value;
   loadImages(toSearch);
 });
