@@ -50,6 +50,7 @@ var Smartphone = /** @class */ (function () {
         this.numeroChiamate = 0;
     };
     Smartphone.prototype.riempiRubriche = function () {
+        //non tipizzata per mancanza di tempo
         var toFill = document.getElementById("rubriche");
         var ul = document.createElement("ul");
         toFill.appendChild(ul);

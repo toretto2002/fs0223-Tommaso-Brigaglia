@@ -80,6 +80,7 @@ class Smartphone implements ISmartphone {
   }
 
   riempiRubriche(): void {
+    //non tipizzata per mancanza di tempo
     let toFill: any = document.getElementById("rubriche");
 
     let ul = document.createElement("ul");
