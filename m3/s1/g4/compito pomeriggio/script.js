@@ -15,7 +15,7 @@ var Capo = /** @class */ (function () {
     Capo.prototype.saldoCapo = function () {
         var prezzoScontato = 0;
         prezzoScontato = this.prezzoivainclusa * (1 - this.saldo / 100);
-        return "il prezzo di questo articolo sarebbe: ".concat(this.prezzoivainclusa, "\u20AC ma dato che \u00E8 applicato uno sconto del ").concat(this.saldo, "% lo pagherai ").concat(prezzoScontato);
+        return "il prezzo di questo articolo sarebbe: ".concat(this.prezzoivainclusa, "\u20AC ma dato che \u00E8 applicato uno sconto del ").concat(this.saldo, "% lo pagherai ").concat(prezzoScontato, "\u20AC");
     };
     return Capo;
 }());
@@ -45,6 +45,8 @@ var CatalogoCapi = /** @class */ (function () {
             .then(function () {
             console.log(_this.catalogo);
             console.log(_this.catalogo[3].saldoCapo());
+            console.log(_this.catalogo[1].saldoCapo());
+            console.log(_this.catalogo[4].saldoCapo());
         })
             .catch(function (err) { return console.log(err); });
     };

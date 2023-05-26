@@ -42,7 +42,7 @@ class Capo {
 
     prezzoScontato = this.prezzoivainclusa * (1 - this.saldo / 100);
 
-    return `il prezzo di questo articolo sarebbe: ${this.prezzoivainclusa}€ ma dato che è applicato uno sconto del ${this.saldo}% lo pagherai ${prezzoScontato}`;
+    return `il prezzo di questo articolo sarebbe: ${this.prezzoivainclusa}€ ma dato che è applicato uno sconto del ${this.saldo}% lo pagherai ${prezzoScontato}€`;
   }
 }
 
@@ -62,7 +62,7 @@ class CatalogoCapi {
           throw new Error("non sono riuscito a caricare i capi");
         }
       })
-      .then((catalogoDaServer) => {
+      .then((catalogoDaServer: Capo[]) => {
         // console.log(catalogoDaServer);
         this.catalogo = [];
         catalogoDaServer.forEach((capo: Capo) => {
@@ -86,6 +86,8 @@ class CatalogoCapi {
       .then(() => {
         console.log(this.catalogo);
         console.log(this.catalogo[3].saldoCapo());
+        console.log(this.catalogo[1].saldoCapo());
+        console.log(this.catalogo[4].saldoCapo());
       })
       .catch((err) => console.log(err));
   }
