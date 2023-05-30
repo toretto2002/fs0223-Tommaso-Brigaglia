@@ -1,0 +1,10 @@
+<div class="col" id="posts-container">
+  <div *ngFor="let post of postsInattivi" class="col 4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <p class="card-text">{{ post.body }}</p>
+      </div>
+    </div>
+  </div>
+</div>
