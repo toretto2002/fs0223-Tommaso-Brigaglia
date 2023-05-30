@@ -1,0 +1,9 @@
+<button
+  (click)="toggle()"
+  [innerText]="visibile ? 'nascondi' : 'mostra'"
+  class="btn btn-success"
+></button>
+
+<p *ngIf="visibile">Elemento 1</p>
+
+<p *ngIf="!visibile">Elemento 2</p>
