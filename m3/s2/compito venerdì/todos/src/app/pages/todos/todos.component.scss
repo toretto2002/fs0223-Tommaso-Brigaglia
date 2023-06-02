@@ -1,0 +1,32 @@
+
+p{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.4rem;
+  margin: 5px;
+}
+
+.todos-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style:none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+
+    li{
+      width: 100%;
+      margin: 0px 2px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+}

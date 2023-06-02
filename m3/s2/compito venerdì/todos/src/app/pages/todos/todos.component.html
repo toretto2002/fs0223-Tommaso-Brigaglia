@@ -1,0 +1,9 @@
+<div class="todos-container">
+  <ul>
+    <li *ngFor="let todo of todos">
+      <p>{{ todo.title }}</p>
+      <button>✔</button>
+    </li>
+  </ul>
+  <p *ngIf="todos.length == 0">Opps, non ci sono Task</p>
+</div>
