@@ -30,4 +30,12 @@ export class TodosService {
       body: JSON.stringify(todo),
     }).then((response) => response.json());
   }
+
+  checkTodo(todo: Todo) {
+    return fetch(this.apiUrl + '/' + todo.id, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(todo),
+    }).then((response) => response.json());
+  }
 }

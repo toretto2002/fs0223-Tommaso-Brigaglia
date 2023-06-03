@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { TodosComponent } from 'src/app/pages/todos/todos.component';
 import { Todo } from 'src/app/todo';
 import { TodosService } from 'src/app/todos.service';
@@ -12,8 +12,10 @@ export class FormComponent {
   todo: Todo = new Todo('', false);
 
   constructor(private todoSvc: TodosService) {}
+  @ViewChild('textArea') textArea: any;
 
   add() {
     this.todoSvc.addTodo(this.todo).then((res: any) => console.log(res));
+    this.textArea.nativeElement.value = '';
   }
 }

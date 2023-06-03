@@ -1,9 +1,9 @@
 <div class="todos-container">
-  <ul>
-    <li *ngFor="let todo of todos">
+  <ul *ngIf="filteredTodos.length != 0">
+    <li *ngFor="let todo of filteredTodos">
       <p>{{ todo.title }}</p>
-      <button>✔</button>
+      <button (click)="check(todo)">✔</button>
     </li>
   </ul>
-  <p *ngIf="todos.length == 0">Opps, non ci sono Task</p>
+  <p *ngIf="filteredTodos.length == 0">Opps, non ci sono Task</p>
 </div>
