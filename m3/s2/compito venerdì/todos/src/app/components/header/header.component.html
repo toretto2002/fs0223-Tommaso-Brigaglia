@@ -1,6 +1,18 @@
 <nav class="nav">
   <ul>
-    <li class="current-page"><a [routerLink]="['/']">Todos</a></li>
-    <li><a [routerLink]="['/completati']">Completati</a></li>
+    <li>
+      <a
+        class="current-page"
+        (click)="toCompleted()"
+        #todosLink
+        [routerLink]="['/']"
+        >Todos</a
+      >
+    </li>
+    <li>
+      <a (click)="toCompleted()" #completedLink [routerLink]="['/completati']"
+        >Completati</a
+      >
+    </li>
   </ul>
 </nav>

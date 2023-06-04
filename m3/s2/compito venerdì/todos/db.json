@@ -49,6 +49,36 @@
       "title": "fare la spesa",
       "compleded": true,
       "id": 10
+    },
+    {
+      "title": "lavare le magliette",
+      "compleded": true,
+      "id": 11
+    },
+    {
+      "title": "vincere la champions",
+      "compleded": true,
+      "id": 12
+    },
+    {
+      "title": "ciao",
+      "compleded": true,
+      "id": 13
+    },
+    {
+      "title": "trhmhrkh",
+      "compleded": true,
+      "id": 14
+    },
+    {
+      "title": "fvmvmb",
+      "compleded": false,
+      "id": 15
+    },
+    {
+      "title": "rendere automatica la lista",
+      "compleded": false,
+      "id": 16
     }
   ]
 }
