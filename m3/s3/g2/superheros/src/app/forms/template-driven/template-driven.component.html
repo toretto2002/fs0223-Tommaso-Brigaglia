@@ -1,0 +1,71 @@
+<form
+  (ngSubmit)="submit(f)"
+  #f="ngForm"
+  class="input-group flex-column align-items-center mt-5"
+>
+  <input
+    ngModel
+    class="input-group-text mb-2"
+    type="text"
+    placeholder="name"
+    name="name"
+    required
+    #name="ngModel"
+  />
+  <span *ngIf="name.invalid && name.touched">Devi inserire il nome</span>
+  <input
+    ngModel
+    class="input-group-text mb-2"
+    type="text"
+    placeholder="alter ego"
+    name="alterEgo"
+    required
+    #alterEgo="ngModel"
+  />
+  <span *ngIf="alterEgo.invalid && alterEgo.touched"
+    >Devi inserire l'alter ego</span
+  >
+  <input
+    ngModel
+    class="input-group-text mb-2"
+    type="text"
+    placeholder="power"
+    name="power"
+    required
+    #power="ngModel"
+  />
+  <span *ngIf="power.invalid && power.touched"
+    >Devi inserire il superpotere</span
+  >
+
+  <input
+    ngModel
+    class="input-group-text mb-2"
+    type="text"
+    placeholder="enemy"
+    name="enemy"
+    required
+    #enemy="ngModel"
+  />
+  <span *ngIf="enemy.invalid && enemy.touched">Devi inserire il nemico</span>
+  <span *ngIf="enemy.value.length > 10 && enemy.touched">Max 10 caratteri</span>
+  <input
+    ngModel
+    class="input-group-text mb-2"
+    type="text"
+    placeholder="planet"
+    name="planet"
+    required
+    #planet="ngModel"
+  />
+  <span *ngIf="planet.invalid && planet.touched">Devi inserire il pianeta</span>
+  <span *ngIf="planet.value.length < 5 && planet.touched">Min 5 caratteri</span>
+  <input
+    ngModel
+    class="input-group-text mb-2"
+    type="text"
+    placeholder="weakness"
+    name="weakness"
+  />
+  <button class="btn btn-danger">crea!</button>
+</form>
