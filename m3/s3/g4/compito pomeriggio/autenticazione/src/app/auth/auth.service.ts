@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
 import { BehaviorSubject, map, tap } from 'rxjs';
 import { IAuthData } from '../interfaces/iauth-data';
-import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ISignUpData } from '../interfaces/isign-up-data';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,7 @@ import { ISignUpData } from '../interfaces/isign-up-data';
 export class AuthService {
   jwtHelper: JwtHelperService = new JwtHelperService();
 
-  apiUrl: string = ' http://localhost:3000';
+  apiUrl: string = 'http://localhost:3000';
   registerUrl: string = this.apiUrl + '/register';
   loginUrl: string = this.apiUrl + '/login';
   userUrl: string = this.apiUrl + '/users';
@@ -21,7 +21,7 @@ export class AuthService {
   user$ = this.authSubject.asObservable();
   isLoggedIn$ = this.user$.pipe(map((user) => !!user));
 
-  autoLogTimer: any;
+  authLogoutTimer: any;
 
   constructor(private http: HttpClient, private router: Router) {
     this.restoreUser();
@@ -46,11 +46,14 @@ export class AuthService {
     this.authSubject.next(null);
     localStorage.removeItem('user');
     this.router.navigate(['/']);
+    if (this.authLogoutTimer) {
+      clearTimeout(this.authLogoutTimer);
+    }
   }
 
   autoLogout(expDate: Date) {
     const expMs = expDate.getTime() - new Date().getTime();
-    this.autoLogTimer = setTimeout(() => {
+    this.authLogoutTimer = setTimeout(() => {
       this.logout();
     }, expMs);
   }

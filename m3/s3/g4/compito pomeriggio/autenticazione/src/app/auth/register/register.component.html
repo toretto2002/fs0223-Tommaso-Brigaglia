@@ -1,1 +1,62 @@
-<p>register works!</p>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-5">
+      <div class="row mt-5">
+        <form
+          #f="ngForm"
+          (ngSubmit)="register(f)"
+          class="input-group flex-column"
+        >
+          <label class="form-label" for="email">
+            Inserisci la tua E-mail
+          </label>
+          <input
+            ngModel
+            email
+            type="email"
+            name="email"
+            placeholder="E-mail"
+            required
+            #email="ngModel"
+            class="form-control w-100 border rounded-2 mb-2"
+          />
+          <label class="form-label" for="password">
+            Scegli la tua Password
+          </label>
+          <input
+            ngModel
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            #password="ngModel"
+            class="form-control w-100 border rounded-2 mb-2"
+          />
+          <label class="form-label"> Inserisci il tuo nome </label>
+          <input
+            ngModel
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            #name="ngModel"
+            class="form-control w-100 border rounded-2 mb-2"
+          />
+          <label class="form-label"> Inserisci il tuo cognome </label>
+          <input
+            ngModel
+            type="text"
+            name="surname"
+            placeholder="Surname"
+            required
+            #surname="ngModel"
+            class="form-control w-100 border rounded-2 mb-4"
+          />
+          <button [disabled]="f.invalid" class="btn btn-primary rounded-2">
+            registrati
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

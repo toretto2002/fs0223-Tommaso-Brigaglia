@@ -1,3 +1,18 @@
 {
-  "user" : []
+  "users": [
+    {
+      "email": "jadovyk@mailinator.com",
+      "password": "$2a$10$kSkTDcyhwkEczcatkVZohePLuitHNoWbi8Y6M7LilINPlLD6Kg1RG",
+      "name": "Raven Middleton",
+      "surname": "Richardson",
+      "id": 1
+    },
+    {
+      "email": "colex@mailinator.com",
+      "password": "$2a$10$F/Ewyk2kPb0nQVWaUn/GS.eErSxDUoeD5a6PBDot8aVN0ZAHvW.Dy",
+      "name": "Duncan Crawford",
+      "surname": "Lott",
+      "id": 2
+    }
+  ]
 }
