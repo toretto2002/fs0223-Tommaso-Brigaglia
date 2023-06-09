@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-5 pt-5 d-flex flex-column">
+      <h1 class="mb-5 align-self-center">Aggiungi un articolo</h1>
+      <form
+        [formGroup]="form"
+        (ngSubmit)="submit(form)"
+        class="d-flex flex-column"
+      >
+        <label>Inserisci il nome dell'articolo</label>
+        <input
+          type="text-area"
+          class="form-control"
+          formControlName="productName"
+        />
+        <label>Inserisci una breve descrizione</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="productDescription"
+        />
+        <label>Inserisci l'URL dell'immagine</label>
+        <input type="text" class="form-control" formControlName="imgUrl" />
+        <label>Inserisci il prezzo</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="productPrice"
+        />
+        <button
+          [disabled]="form.invalid"
+          class="btn btn-success mt-4 w-75 align-self-center"
+        >
+          Invia
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
