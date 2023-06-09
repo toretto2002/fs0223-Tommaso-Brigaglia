@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-5">
+      <div class="row mt-5">
+        <div class="col-6 d-flex justify-content-center">
+          <a [routerLink]="['/auth', 'login']" class="btn btn-primary"
+            >accedi</a
+          >
+        </div>
+        <div class="col-6 d-flex justify-content-center">
+          <a [routerLink]="['/auth', 'register']" class="btn btn-primary"
+            >iscriviti</a
+          >
+        </div>
+        <div class="col-12 d-flex flex-column align-items-center mt-3">
+          <button (click)="logout()" class="btn btn-danger w-50">Logout</button>
+        </div>
+        <div class="col-12 d-flex flex-column align-items-center mt-3">
+          <a class="btn btn-success w-50">Modifica Profilo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
