@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { IAuthData } from '../interfaces/iauth-data';
 
 @Component({
   selector: 'app-auth',
